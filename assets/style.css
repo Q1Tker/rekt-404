@@ -26,6 +26,7 @@ h6 {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 
 .error-404 {
@@ -45,15 +46,25 @@ h6 {
 
 .dollar-rekt {
     color: white !important;
-    font-size: 75px;
+    font-size: 50px;
 }
-
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 10;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 @media (min-width: 768px) {
@@ -64,5 +75,9 @@ h6 {
     .rekt-404 {
         font-size: 120px;
         margin-top: -20px;
+    }
+
+    .dollar-rekt {
+        font-size: 75px;
     }
 }
