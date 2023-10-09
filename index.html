@@ -17,7 +17,7 @@
   </head>
   <body>
     <a href="https://t.me/REKTgame">
-      <section class="main-section">
+      <section class="main-section" id="crackScreen">
         <div class="content" id="404content">
           <center>
             <h3 class="error-404">404</h3>
@@ -28,25 +28,26 @@
     </a>
 
     <script>
-      function hide404() {
-        var hide404div = document.getElementById('404content');
-        hide404div.style.display = 'none';
+      const crackSection = document.getElementById('crackScreen');
+
+      function crackClassName() {
+        crackSection.className = 'main-section-crack';
       }
 
-      function show404() {
-        var show404div = document.getElementById('404content');
-        show404div.style.display = 'block';
+      function addBackgroundSound() {
+        const audioElement = new Audio('/assets/crack.mp3');
 
-        var visible = true;
-        setInterval(function () {
-          visible = !visible;
-          show404div.style.visibility = visible ? 'visible' : 'hidden';
-        }, 500);
+        audioElement.addEventListener('canplaythrough', function () {
+          audioElement.play();
+        });
+
+        audioElement.load();
       }
 
-      hide404();
-
-      setTimeout(show404, 3000);
+      setTimeout(function () {
+        crackClassName();
+        addBackgroundSound();
+      }, 3000);
     </script>
   </body>
 </html>
