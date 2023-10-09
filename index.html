@@ -34,20 +34,24 @@
         crackSection.className = 'main-section-crack';
       }
 
-      function addBackgroundSound() {
+      function crackSound() {
         const audioElement = new Audio('/assets/crack.mp3');
 
         audioElement.addEventListener('canplaythrough', function () {
           audioElement.play();
         });
 
+        audioElement.onloadeddata = function () {
+          audioElement.play();
+        };
+
         audioElement.load();
       }
 
       setTimeout(function () {
         crackClassName();
-        addBackgroundSound();
-      }, 3000);
+        crackSound();
+      }, 3000); // 3000 milliseconds (3 seconds)
     </script>
   </body>
 </html>
