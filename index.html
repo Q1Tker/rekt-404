@@ -18,15 +18,35 @@
   <body>
     <a href="https://t.me/REKTgame">
       <section class="main-section">
-        <div
-          class="overlay-image"
-          style="background-image: url(assets/img/crack-screen-2.png)"
-        ></div>
-        <div class="content">
-          <h3 class="error-404">404</h3>
-          <h1 class="rekt-404"><span class="dollar-rekt">$</span>REKT</h1>
+        <div class="content" id="404content">
+          <center>
+            <h3 class="error-404">404</h3>
+            <h1 class="rekt-404"><span class="dollar-rekt">$</span>REKT</h1>
+          </center>
         </div>
       </section>
     </a>
+
+    <script>
+      function hide404() {
+        var hide404div = document.getElementById('404content');
+        hide404div.style.display = 'none';
+      }
+
+      function show404() {
+        var show404div = document.getElementById('404content');
+        show404div.style.display = 'block';
+
+        var visible = true;
+        setInterval(function () {
+          visible = !visible;
+          show404div.style.visibility = visible ? 'visible' : 'hidden';
+        }, 500);
+      }
+
+      hide404();
+
+      setTimeout(show404, 3000);
+    </script>
   </body>
 </html>

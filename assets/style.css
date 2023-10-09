@@ -26,7 +26,10 @@ h6 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: relative;
+    background-image: url("/assets/img/crack-screen.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .error-404 {
@@ -54,10 +57,9 @@ h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10;
 }
 
-.overlay-image {
+/* .overlay-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +67,7 @@ h6 {
     height: 100%;
     background-size: cover;
     background-position: center;
-}
+} */
 
 @media (min-width: 768px) {
     .error-404 {
@@ -79,5 +81,12 @@ h6 {
 
     .dollar-rekt {
         font-size: 75px;
+    }
+
+    .main-section {
+        background-image: url("/assets/img/cracked-screen-desktop.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
